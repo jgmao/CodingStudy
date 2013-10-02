@@ -1,7 +1,5 @@
 //test
-class RegularExpressionMatch
-{
-
+namespace study{
 bool isMatch(const char* s, const char* p)
 {
 
@@ -40,4 +38,4 @@ bool isMatch(const char* s, const char* p)
     else
         return false;
 }
-};
+}
