@@ -3,6 +3,7 @@
 #include <CodingStudy.h>
 using namespace study;
 TEST(RegularExpressionMatchTest, isMatch) {
+    EXPECT_FALSE(isMatch("", "."));
     EXPECT_TRUE(isMatch("a","ab*"));
     EXPECT_FALSE(isMatch("aa","a"));
     EXPECT_TRUE(isMatch("aa","aa"));

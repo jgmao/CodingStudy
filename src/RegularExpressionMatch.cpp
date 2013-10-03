@@ -34,8 +34,13 @@ bool isMatch(const char* s, const char* p)
     {
         if (s[i]==p[j]||p[j]=='.')
         {
-            i++; j++;
-            return isMatch(s+i,p+j);
+            if (s[i]!=eos)
+            {
+                i++; j++;
+                return isMatch(s+i,p+j);
+            }
+            else
+                return false;
         }
         else
             return false;
