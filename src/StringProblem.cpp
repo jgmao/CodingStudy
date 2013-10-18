@@ -24,7 +24,7 @@ namespace study{
       }
     }
   }
-    void removeDuplicateHash(std::string& str)
+    void removeDuplicateHashMap(std::string& str)
   {
     std::set<char> map;
     int i=0; 

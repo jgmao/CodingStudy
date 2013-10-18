@@ -1,22 +1,22 @@
 #include "gtest/gtest.h"
 #include "CodingStudy.h"
 using namespace study;
-TEST(CyclicSortedList, insert)
-{
-    CyclicSortedList csl;
-    csl.insert(csl.head, 1);
-    csl.insert(csl.head, 5);
-    csl.insert(csl.head, 3);
-    csl.insert(csl.head->next->next, 4);
-    ListNode* nd = csl.head;
-    int rst[] = {1,3,4,5};
-    int p = 0;
-    while (nd!=nullptr) {
-        EXPECT_EQ(nd->value, *(rst+p));
-        p++;
-        nd=nd->next;
-    }
-}
+//TEST(CyclicSortedList, insert)
+//{
+//    CyclicSortedList csl;
+//    csl.insert(csl.head, 1);
+//    csl.insert(csl.head, 5);
+//    csl.insert(csl.head, 3);
+//    csl.insert(csl.head->next->next, 4);
+//    ListNode* nd = csl.head;
+//    int rst[] = {1,3,4,5};
+//    int p = 0;
+//    while (nd!=nullptr) {
+//        EXPECT_EQ(nd->value, *(rst+p));
+//        p++;
+//        nd=nd->next;
+//    }
+//}
 
 TEST(SingleNumber, signelNumber){
     int A[] = {2,2,1};
@@ -56,8 +56,8 @@ TEST(StringProblem, isAnagram){
 TEST(MatrixProblem, rotate90){
     uint32_t im1[] = {1,2,3,4,5,6,7,8,9};
     uint32_t im2[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
-    rotate90(im1);
-    rotate90(im2);
+    rotate90(im1,3);
+    rotate90(im2,4);
     EXPECT_EQ(3,im1[0]);
     EXPECT_EQ(9,im1[2]);
     EXPECT_EQ(8,im1[5]);
