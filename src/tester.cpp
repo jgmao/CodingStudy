@@ -57,11 +57,11 @@ TEST(MatrixProblem, rotate90){
     uint32_t im1[] = {1,2,3,4,5,6,7,8,9};
     uint32_t im2[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
     rotate90(im1,3);
-    rotate90(im2,4);
     EXPECT_EQ(3,im1[0]);
     EXPECT_EQ(9,im1[2]);
     EXPECT_EQ(8,im1[5]);
     EXPECT_EQ(5,im1[4]);
+    rotate90(im2,4);
     EXPECT_EQ(4,im2[0]);
     EXPECT_EQ(12,im2[2]);
     EXPECT_EQ(9,im2[10]);

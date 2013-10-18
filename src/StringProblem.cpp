@@ -13,7 +13,7 @@ namespace study{
     while (i<str.size())//the size is vary during loop
     {
       unsigned int index = (unsigned int)(str[i]-'a');
-      if (map && (1<<index))
+      if (map & (1<<index)) //important, && is not bitwise AND, it is and of nonzero value  (bool and)
       {
         str.erase(i,1);
       }
@@ -30,7 +30,7 @@ namespace study{
     int i=0; 
     while (i<str.size())
     {
-      if (map.end()==map.find(str[i]))
+      if (map.end()!=map.find(str[i]))
       {
         str.erase(i,1);
       }

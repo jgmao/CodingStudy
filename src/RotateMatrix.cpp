@@ -8,6 +8,9 @@ namespace study{
     int i_current, j_current;
     int i_rotate,j_rotate;
     int i_shift, j_shift;
+    int offset = 0;
+    if ((N%2)==0)
+        offset = 1;
     for (int j=0; j<N/2;j++)//j is row number
       for (int i=j; i<N-j-1; i++)//i is col number
       {
@@ -20,7 +23,7 @@ namespace study{
         do
         {
           i_shift = i_current-ctr;
-          j_shift = j_current+ctr;
+          j_shift = -j_current+ctr;
           if (i_shift==0 && j_shift==0)
             break;
           //rotate
@@ -28,7 +31,7 @@ namespace study{
           j_rotate = i_shift;
           //do inverse coordinate shift
           i_current = i_rotate+ctr;
-          j_current = j_rotate-ctr;
+          j_current = -(j_rotate-ctr+offset);
           //update value
           temp2 = im[j_current*N+i_current]; 
           im[j_current*N+i_current]=temp1;           
