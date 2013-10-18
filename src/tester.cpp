@@ -1,6 +1,5 @@
 #include "gtest/gtest.h"
 #include "CodingStudy.h"
-#include <CodingStudy.h>
 using namespace study;
 TEST(CyclicSortedList, insert)
 {
@@ -35,4 +34,36 @@ TEST(RegularExpressionMatchTest, isMatch) {
     EXPECT_TRUE(isMatch("ab", ".*"));
     EXPECT_TRUE(isMatch("aab", "c*a*b"));
     EXPECT_FALSE(isMatch("acaabbaccbbacaabbbb", "a*.*b*.*a*aa*a*"));
+}
+
+TEST(StringProblem, removeDuplicate) {
+    std::string str = "abccbda";
+    removeDuplicateBitMap(str);
+    EXPECT_EQ("abcd", str);
+    str = "sfdfafs";
+    removeDuplicateHashMap(str);
+    EXPECT_EQ("sfda", str);
+}
+
+TEST(StringProblem, isAnagram){
+    std::string str1 = "williamshakespeare";
+    std::string str2 = "iamaweakishspeller";
+    std::string str3 = "iamaweakishapeller";
+    EXPECT_TRUE(isAnagram(str1, str2));
+    EXPECT_FALSE(isAnagram(str1, str3));
+}
+
+TEST(MatrixProblem, rotate90){
+    uint32_t im1[] = {1,2,3,4,5,6,7,8,9};
+    uint32_t im2[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
+    rotate90(im1);
+    rotate90(im2);
+    EXPECT_EQ(3,im1[0]);
+    EXPECT_EQ(9,im1[2]);
+    EXPECT_EQ(8,im1[5]);
+    EXPECT_EQ(5,im1[4]);
+    EXPECT_EQ(4,im2[0]);
+    EXPECT_EQ(12,im2[2]);
+    EXPECT_EQ(9,im2[10]);
+    EXPECT_EQ(7,im2[5]);
 }
