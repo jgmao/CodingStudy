@@ -1,13 +1,23 @@
+import java.util.Iterator;
+import java.util.PriorityQueue;
+
 //1.7
 //solution seems not right
+//test priorityqueue for 3.6
 public class setZero {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		PriorityQueue<Integer> q = new PriorityQueue<Integer>();
+		q.add(3);
+		q.add(1);
+		q.add(2);
+		Iterator<Integer> it = q.iterator();
+		while(it.hasNext()){
+			System.out.println(it.next());
+		}
 	}
 	
 	public void setzero(int[][] matrix, int m, int n){
