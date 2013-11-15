@@ -125,6 +125,10 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\src\RegularExpressionMatch.cpp" />
     <ClCompile Include="..\..\..\src\main.cpp" />
+    <ClCompile Include="..\..\..\src\RotateMatrix.cpp" />
+    <ClCompile Include="..\..\..\src\ShortestWordDistance.cpp" />
+    <ClCompile Include="..\..\..\src\SingleNumber.cpp" />
+    <ClCompile Include="..\..\..\src\StringProblem.cpp" />
     <ClCompile Include="..\..\..\src\tester.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -67,3 +67,8 @@ TEST(MatrixProblem, rotate90){
     EXPECT_EQ(9,im2[10]);
     EXPECT_EQ(7,im2[5]);
 }
+
+TEST(ShortestPath, ShortestWordDistance){
+    int rst = ShortestWordDistance("../../../res/three.txt");
+    EXPECT_EQ(0,rst);
+}
