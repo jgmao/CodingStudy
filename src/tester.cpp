@@ -67,7 +67,25 @@ TEST(MatrixProblem, rotate90){
     EXPECT_EQ(9,im2[10]);
     EXPECT_EQ(7,im2[5]);
 }
-
+TEST(NumberProblem, countUgly){
+    std::string number = "123";
+    int rst = countUgly(number);
+    EXPECT_EQ(9,rst);
+    number = "0123";
+    rst = countUgly(number);
+    EXPECT_EQ(27,rst);
+    number = "12345";
+    int rst1 = countUgly(number);
+    number = "012345";
+    int rst2 = countUgly(number);
+    EXPECT_EQ(rst1*3,rst);
+    number = "1234542803861";
+    rst = countUgly(number);
+    EXPECT_EQ(999,rst);
+    number = "01234542803861";
+    rst = countUgly(number);
+    EXPECT_EQ(1999,rst);
+}
 TEST(ShortestPath, ShortestWordDistance){
     int rst = ShortestWordDistance("../../../res/three.txt");
     EXPECT_EQ(0,rst);
