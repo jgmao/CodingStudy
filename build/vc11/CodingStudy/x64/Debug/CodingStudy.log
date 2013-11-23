@@ -1,9 +1,8 @@
-﻿Build started 11/15/2013 5:53:47 PM.
+﻿Build started 11/22/2013 4:59:07 PM.
      1>Project "C:\Users\guoxin.jin\Documents\CodingStudy\build\vc11\CodingStudy\CodingStudy.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc110.pdb" /Gd /TP /errorReport:prompt ..\..\..\src\ShortestWordDistance.cpp
-         ShortestWordDistance.cpp
-     1>..\..\..\src\ShortestWordDistance.cpp(14): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc110.pdb" /Gd /TP /errorReport:prompt ..\..\..\src\tester.cpp
+         tester.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\guoxin.jin\Documents\CodingStudy\build\vc11\CodingStudy\x64\Debug\CodingStudy.exe" /INCREMENTAL /NOLOGO gtest.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\guoxin.jin\Documents\CodingStudy\build\vc11\CodingStudy\x64\Debug\CodingStudy.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\guoxin.jin\Documents\CodingStudy\build\vc11\CodingStudy\x64\Debug\CodingStudy.lib" /MACHINE:X64 x64\Debug\RegularExpressionMatch.obj
          x64\Debug\main.obj
@@ -12,9 +11,10 @@
          x64\Debug\SingleNumber.obj
          x64\Debug\StringProblem.obj
          x64\Debug\tester.obj
+         x64\Debug\UglyNumber.obj
          CodingStudy.vcxproj -> C:\Users\guoxin.jin\Documents\CodingStudy\build\vc11\CodingStudy\x64\Debug\CodingStudy.exe
      1>Done Building Project "C:\Users\guoxin.jin\Documents\CodingStudy\build\vc11\CodingStudy\CodingStudy.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.71
+Time Elapsed 00:00:04.12

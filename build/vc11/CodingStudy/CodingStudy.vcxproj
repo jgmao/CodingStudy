@@ -130,6 +130,7 @@
     <ClCompile Include="..\..\..\src\SingleNumber.cpp" />
     <ClCompile Include="..\..\..\src\StringProblem.cpp" />
     <ClCompile Include="..\..\..\src\tester.cpp" />
+    <ClCompile Include="..\..\..\src\UglyNumber.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include\CodingStudy.h" />

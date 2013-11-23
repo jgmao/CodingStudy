@@ -45,11 +45,68 @@ void readwords(string filename, vector<string>& output)
   }
   printf("read %d words\n",count);
 }
+class AJRNode
+{
+public:
+    string word;
+    vector<AJRNode*> next;
+public:
+    AJRNode(string wd){this->word=wd;}
+};
 
-int ShortestWordDistance(string filename)
+void buildALR(vector<string>& words, vector<AJRNode*>& nodes)
+{
+    for (int i=0; i< words.size(); i++)
+    {
+        nodes[i] = new AJRNode(words[i]);
+    }
+    for (int i=0; i< words.size(); i++)
+    {
+        for (int j=0;j<words.size();j++)
+        {
+            if (i!=j)
+            {
+                if (hamming(words[i],words[j])==1)
+                {
+                    nodes[i]->next.push_back(nodes[j]);
+                }
+            }
+        }
+    }
+}
+
+void AstarSearch(AJRNode* start, AJRNode* end)
+{
+
+
+}
+
+int ShortestWordDistance(string filename, string A, string B)
 {
   vector<string> words;
   readwords(filename,words);
+  vector<AJRNode*> nodes(words.size());
+  buildALR(words,nodes);
+  if (A.compare(B)==0)
+      return 0;
+  AJRNode* start=NULL;
+  AJRNode* end=NULL;
+  bool foundA=false,foundB=false;
+  for (int i=0; i<words.size();i++)
+  {
+      if (A.compare(words[i])==0)
+      {
+          start = nodes[i];
+          foundA=true;
+      }
+      if (B.compare(words[i])==0)
+      {
+          end = nodes[i];
+          foundB=true;
+      }
+  }
+  if (foundA&&foundB )
+    AstarSearch(start,end);
   return 0;
 }
 }
