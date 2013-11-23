@@ -1,1 +1,23 @@
-guoxinjin@ghome.local.5437
+<project>
+  <target name="clean">
+    <delete dir="./classes"/>
+    <delete dir="./jars"/>
+  </target>
+
+  <target name="compile">
+    <mkdir dir="./classes"/>
+    <javac srcdir="../../src/java" destdir="./classes"/>
+  </target>                                   
+
+  <target name="jar">                             
+    <mkdir dir="./jar"/>
+    <jar destfile="./jar/StringSubstitution.jar" basedir="./classes">
+      <manifest>                                                                
+        <attribute name="Main-Class" value="challenge.StringSubstitution"/>
+      </manifest>                                                               
+    </jar>                                                                      
+  </target>                                                                     
+
+  <target name="run">                                                               <java jar="./jar/StringSubstitution.jar" fork="true"/>
+  </target> 
+</project>
